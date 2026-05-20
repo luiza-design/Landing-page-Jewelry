@@ -1,6 +1,8 @@
-<!DOCTYPE html>
+[21.05.2026 1:12] Luiza Sargsyan: <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -20,13 +22,17 @@
 
   <style>
 
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
     html{
       scroll-behavior:smooth;
     }
 
     body{
-      margin:0;
-      padding:0;
       background:#3b0d16;
       color:white;
       overflow-x:hidden;
@@ -37,16 +43,24 @@
       font-family:'Cormorant Garamond',serif;
     }
 
-    .luxury-gradient{
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    .hero-bg{
+
       background:
       linear-gradient(
-      rgba(18,5,8,0.72),
-      rgba(18,5,8,0.82)),
-      url("Github1.jpg");
+      rgba(15,5,8,0.70),
+      rgba(15,5,8,0.82)
+      ),
+      url("GitHub1.jpg");
 
       background-size:cover;
       background-position:center;
       background-attachment:fixed;
+
     }
 
     .glass{
@@ -65,7 +79,7 @@
 
     .luxury-btn:hover{
       transform:translateY(-5px);
-      box-shadow:0 20px 40px rgba(0,0,0,0.4);
+      box-shadow:0 15px 35px rgba(0,0,0,0.4);
     }
 
     .image-hover{
@@ -120,6 +134,7 @@
     }
 
     @keyframes scroll{
+
       from{
         transform:translateX(0);
       }
@@ -127,9 +142,39 @@
       to{
         transform:translateX(-50%);
       }
+
+    }
+
+    .particle{
+      position:absolute;
+      width:8px;
+      height:8px;
+      background:#d8b98a;
+      border-radius:50%;
+      opacity:0.4;
+      animation:particleFloat 10s linear infinite;
+    }
+
+    @keyframes particleFloat{
+
+      from{
+        transform:translateY(0px);
+        opacity:0;
+      }
+
+      50%{
+        opacity:0.5;
+      }
+
+      to{
+        transform:translateY(-800px);
+        opacity:0;
+      }
+
     }
 
   </style>
+
 </head>
 
 <body>
@@ -138,7 +183,7 @@
 
 <nav class="fixed top-0 left-0 w-full z-50 glass px-8 py-5 flex justify-between items-center">
 
-  <h2 class="text-3xl font-semibold tracking-wide">
+  <h2 class="text-3xl md:text-4xl font-semibold tracking-wide">
     Velvet Jewelry
   </h2>
 
@@ -160,23 +205,29 @@
 
 <!-- HERO -->
 
-<section class="luxury-gradient min-h-screen flex items-center px-8 md:px-20">
+<section class="hero-bg min-h-screen flex items-center px-8 md:px-20 relative overflow-hidden">
 
-  <div class="grid md:grid-cols-2 gap-16 items-center w-full">
+  <!-- PARTICLES -->
+
+  <div class="particle top-[80%] left-[10%]"></div>
+  <div class="particle top-[90%] left-[30%]"></div>
+  <div class="particle top-[85%] left-[60%]"></div>
+  <div class="particle top-[95%] left-[80%]"></div>
+
+  <div class="grid md:grid-cols-2 gap-16 items-center w-full pt-32">
 
     <div class="fade-up">
 
       <p class="uppercase tracking-[6px] gold mb-6 text-sm">
         Premium Vintage Jewelry
       </p>
-
-      <h1 class="text-6xl md:text-8xl leading-none font-semibold mb-8 text-white">
+[21.05.2026 1:12] Luiza Sargsyan: <h1 class="text-6xl md:text-8xl leading-none font-semibold mb-8">
         Timeless Jewelry Crafted For Modern Icons
       </h1>
 
       <p class="text-white/70 text-lg leading-9 max-w-xl mb-10">
         Discover editorial luxury inspired by cinematic fashion campaigns,
-        timeless femininity, and handcrafted elegance.
+        timeless femininity and premium handcrafted elegance.
       </p>
 
       <div class="flex flex-wrap gap-5">
@@ -195,11 +246,9 @@
 
     <div class="fade-up floating">
 
-      <!-- EXISTING FILE -->
-      <!-- Github1.jpg -->
-
       <div class="image-hover shadow-2xl">
-<img src="Github1.jpg"
+
+        <img src="GitHub1.jpg"
         alt=""
         class="w-full h-[760px] object-cover rounded-[30px]">
 
@@ -230,14 +279,12 @@
   <div class="grid md:grid-cols-3 gap-8">
 
     <!-- CARD 1 -->
+
     <div class="glass rounded-[30px] p-5 fade-up">
 
       <div class="image-hover mb-6">
 
-        <!-- EXISTING FILE -->
-        <!-- Github2.jpg -->
-
-        <img src="Github2.jpg"
+        <img src="GitHub2.jpg"
         class="w-full h-[450px] object-cover rounded-[24px]">
 
       </div>
@@ -253,14 +300,12 @@
     </div>
 
     <!-- CARD 2 -->
+
     <div class="glass rounded-[30px] p-5 fade-up">
 
       <div class="image-hover mb-6">
 
-        <!-- EXISTING FILE -->
-        <!-- Github3.jpg -->
-
-        <img src="Github3.jpg"
+        <img src="GitHub3.jpg"
         class="w-full h-[450px] object-cover rounded-[24px]">
 
       </div>
@@ -276,14 +321,12 @@
     </div>
 
     <!-- CARD 3 -->
+
     <div class="glass rounded-[30px] p-5 fade-up">
 
       <div class="image-hover mb-6">
 
-        <!-- EXISTING FILE -->
-        <!-- Github4.jpg -->
-
-        <img src="Github4.jpg"
+        <img src="GitHub4.jpg"
         class="w-full h-[450px] object-cover rounded-[24px]">
 
       </div>
@@ -310,10 +353,7 @@
 
     <div class="fade-up image-hover">
 
-      <!-- EXISTING FILE -->
-      <!-- Github5.jpg -->
-
-      <img src="Github5.jpg"
+      <img src="GitHub5.jpg"
       class="w-full h-[720px] object-cover rounded-[30px]">
 
     </div>
@@ -344,7 +384,7 @@
 
 </section>
 
-<!-- SIGNATURE GALLERY -->
+<!-- GALLERY -->
 
 <section class="py-32 overflow-hidden">
 
@@ -364,25 +404,21 @@
 
     <div class="marquee-track">
 
-      <!-- IMPORTANT -->
-      <!-- USE YOUR EXISTING FILES -->
+      <img src="GitHub6.jpg" class="w-[350px] h-[500px] object-cover rounded-[28px]">
+      <img src="GitHub7.jpg" class="w-[350px] h-[500px] object-cover rounded-[28px]">
+      <img src="GitHub8.jpg" class="w-[350px] h-[500px] object-cover rounded-[28px]">
+      <img src="GitHub9.jpg" class="w-[350px] h-[500px] object-cover rounded-[28px]">
+[21.05.2026 1:12] Luiza Sargsyan: <img src="GitHub10.jpg" class="w-[350px] h-[500px] object-cover rounded-[28px]">
+      <img src="GitHub11.jpg" class="w-[350px] h-[500px] object-cover rounded-[28px]">
+      <img src="GitHub12.jpg" class="w-[350px] h-[500px] object-cover rounded-[28px]">
+      <img src="GitHub13.jpg" class="w-[350px] h-[500px] object-cover rounded-[28px]">
 
-      <img src="Github6.jpg" class="w-[350px] h-[500px] object-cover rounded-[28px]">
-      <img src="Github7.jpg" class="w-[350px] h-[500px] object-cover rounded-[28px]">
-      <img src="Github8.jpg" class="w-[350px] h-[500px] object-cover rounded-[28px]">
-      <img src="Github9.jpg" class="w-[350px] h-[500px] object-cover rounded-[28px]">
-      <img src="Github10.jpg" class="w-[350px] h-[500px] object-cover rounded-[28px]">
-      <img src="Github11.jpg" class="w-[350px] h-[500px] object-cover rounded-[28px]">
-      <img src="Github12.jpg" class="w-[350px] h-[500px] object-cover rounded-[28px]">
-      <img src="Github13.jpg" class="w-[350px] h-[500px] object-cover rounded-[28px]">
+      <!-- DUPLICATE -->
 
-      <!-- DUPLICATE FOR SMOOTH LOOP -->
-
-      <img src="Github6.
-        jpg" class="w-[350px] h-[500px] object-cover rounded-[28px]">
-      <img src="Github7.jpg" class="w-[350px] h-[500px] object-cover rounded-[28px]">
-      <img src="Github8.jpg" class="w-[350px] h-[500px] object-cover rounded-[28px]">
-      <img src="Github9.jpg" class="w-[350px] h-[500px] object-cover rounded-[28px]">
+      <img src="GitHub6.jpg" class="w-[350px] h-[500px] object-cover rounded-[28px]">
+      <img src="GitHub7.jpg" class="w-[350px] h-[500px] object-cover rounded-[28px]">
+      <img src="GitHub8.jpg" class="w-[350px] h-[500px] object-cover rounded-[28px]">
+      <img src="GitHub9.jpg" class="w-[350px] h-[500px] object-cover rounded-[28px]">
 
     </div>
 
@@ -411,8 +447,7 @@
     <div class="bg-white p-10 rounded-[30px] shadow-xl fade-up">
 
       <p class="text-lg leading-9 mb-8 text-black/70">
-        “Absolutely stunning craftsmanship and premium quality. 
-        The aesthetic feels straight from a luxury fashion campaign.”
+        “Absolutely stunning craftsmanship and premium quality.”
       </p>
 
       <h4 class="text-2xl">
@@ -424,7 +459,7 @@
     <div class="bg-white p-10 rounded-[30px] shadow-xl fade-up">
 
       <p class="text-lg leading-9 mb-8 text-black/70">
-        “Elegant, emotional and timeless. Every detail feels luxurious.”
+        “Elegant, emotional and timeless luxury aesthetic.”
       </p>
 
       <h4 class="text-2xl">
@@ -436,7 +471,7 @@
     <div class="bg-white p-10 rounded-[30px] shadow-xl fade-up">
 
       <p class="text-lg leading-9 mb-8 text-black/70">
-        “One of the most beautiful jewelry aesthetics I’ve ever seen online.”
+        “One of the most beautiful jewelry websites I’ve seen.”
       </p>
 
       <h4 class="text-2xl">
@@ -505,21 +540,24 @@
 
 </footer>
 
-<!-- GSAP -->
+<!-- GSAP ANIMATION -->
 
 <script>
 
   gsap.utils.toArray(".fade-up").forEach((element)=>{
 
     gsap.to(element,{
+
       opacity:1,
       y:0,
       duration:1.2,
       ease:"power3.out",
+
       scrollTrigger:{
         trigger:element,
         start:"top 85%"
       }
+
     });
 
   });
